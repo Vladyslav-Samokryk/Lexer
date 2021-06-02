@@ -1,0 +1,62 @@
+package com.rubylexer;
+
+public enum State {
+    START,
+
+    // Punctuation
+    COMA,
+    DOT,
+    LBRACE,
+    RBRACE,
+    L_FIG_BRACE,
+    R_FIG_BRACE,
+    L_SQ_BRACE,
+    R_SQ_BRACE,
+    DOUBLE_DOT,
+    DOT_COMA,
+    NEW_LINE,
+    BSLASH,
+
+    // ID
+    ID,
+    ID_START,
+    ID_FOUND_ESCAPE,
+    ID_TRAIL_ERROR,
+
+    // NUMBER
+    NUMBER_START,
+    NUMBER_DOUBLE,
+    NUMBER_EXP_START,
+    NUMBER_EXP_SIGNED,
+    NUMBER_EXP_UNSIGNED,
+    NUMBER_ESCAPE,
+    NUMBER_RETURN,
+    NUMBER_ERROR,
+
+    // SYMBOL
+    SYMBOL,
+    SYMBOL_START,
+
+    // OPERATIONS
+    OPERATION,
+
+    // STR LIT
+    STR_LIT_END,
+    STR_LIT,
+    STR_LIT_BSLASH,
+    STR_MULTILINE,
+    STR_MULTILINE_N,
+    STR_LIT_ERROR,
+    STR_LIT_ERROR_BACK,
+    STR_LIT_FINAL,
+
+    // COMMENT
+    COMMENT_SINGLE_LINE,
+    COMMENT_SINGLE_LINE_END,
+
+    // HEREDOC
+    HEREDOC_START,
+    HEREDOC_FIRST,
+    HEREDOC_SECOND,
+    HEREDOC_FOUND_ID,
+}
